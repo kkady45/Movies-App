@@ -11,7 +11,7 @@ export default function StoreProvider(props){
       setSearchMovie(data.results)
     }
     return(
-        <storeContext.Provider value={{searchMovie,getBySearch}}>
+        <storeContext.Provider value={{searchMovie,getBySearch,setSearchMovie}}>
             {props.children}
         </storeContext.Provider>
     )

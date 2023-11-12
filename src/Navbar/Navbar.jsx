@@ -116,12 +116,15 @@ export default function Navbar(props) {
           </>
           }
           {props.isLogin?  <li className="nav-item">
-            <a onClick={()=>{
-              
+            <a onClick={(e)=>{
+              e.preventDefault()
               console.log(props);
-              navigateTo('/login')
-              localStorage.removeItem('token')
-              // props.setIsLogin(false);
+              navigateTo('/login');
+              localStorage.removeItem('token');
+              data.setSearchMovie([]);
+              props.setIsLogin(false)
+              console.log(props);
+
             }} className='text-decoration-none text-white nav-link btn btn-success ms-2' href="">Log Out</a>
           </li> :<></>}
          

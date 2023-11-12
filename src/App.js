@@ -23,7 +23,7 @@ function App() {
   
   const[isLogin,setIsLogin]=useState(false);
   const[userName,setUserName]=useState('')
-  const routes=createBrowserRouter([{path:'',element:<Layout userName={userName} setIslogin={setIsLogin} isLogin={isLogin}/>,children:[
+  const routes=createBrowserRouter([{path:'',element:<Layout userName={userName} setIsLogin={setIsLogin} isLogin={isLogin}/>,children:[
     {index:true,element:<Register/>},
     {path:'*',element:<div>Error </div>},
     {path:'movieDetails/:movieId',element:<ProtectedRoute><MovieDetails/></ProtectedRoute>},
